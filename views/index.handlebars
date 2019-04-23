@@ -1,0 +1,39 @@
+
+{{!-- {{#unless devoured}} --}}
+
+<ul>
+{{#each articles}}
+<h2>{{headline}}</h2>
+<p>{{summary}}</p>
+<p><a href={{url}}>read more...</a></p>
+{{/each}}
+</ul>
+
+{{!-- <tr>
+    <td>{{id}}. {{burger_name}}</td>
+    <td>
+        <form><button class=" btn devourBtn" data-id="{{this.id}}">Ate It!!</button></form>
+    </td>
+</tr>
+{{/unless}} --}}
+
+
+
+
+
+
+
+
+{{#each burgers}}
+{{#if devoured}}
+<tr>
+    <td>{{burger_name}}
+        <span class="fa fa-star "></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+    </td>
+</tr>
+{{/if}}
+{{/each}}
