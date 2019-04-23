@@ -6,6 +6,10 @@
 <h2>{{headline}}</h2>
 <p>{{summary}}</p>
 <p><a href={{url}}>read more...</a></p>
+<div class="comments" data-id="{{this._id}}"></div>
+<input type="text" placeholder="add comment" id="{{this._id}}">
+<button class="comment-btn" data-id="{{this._id}}">post</button>
+
 {{/each}}
 </ul>
 
@@ -24,7 +28,7 @@
 
 
 
-{{#each burgers}}
+{{!-- {{#each burgers}}
 {{#if devoured}}
 <tr>
     <td>{{burger_name}}
@@ -36,4 +40,4 @@
     </td>
 </tr>
 {{/if}}
-{{/each}}
+{{/each}} --}}
