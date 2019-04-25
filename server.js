@@ -69,7 +69,7 @@ app.get("/scrape", function (req, res) {
     res.send("Scrape Complete");
 });
 
-// Route for getting all Articles from the db
+// Route for getting all Articles from the db and rendering them
 app.get("/articles", function(req, res) {
     // Grab every document in the Articles collection
     db.Article.find({})
@@ -90,6 +90,9 @@ app.get("/articles", function(req, res) {
   
 // Route for saving/updating an Article's associated Note
 app.post("/articles/:id", function(req, res) {
+    console.log("req.body!!!: ", req.body.userInput
+    )
+    console.log("req.params: ", req.params)
   // Create a new note and pass the req.body to the entry
   db.Note.create(req.body)
     .then(function(dbNote) {
